@@ -1,7 +1,6 @@
 <?php
-require "UserManager.class.php";
+require "../managers/UserManager.class.php";
 require "../templates/user-list.phtml";
-require_once "../config/connexion.php";
 
 // Instancier une instance de la classe UserManager
 $userManager = new UserManager();
