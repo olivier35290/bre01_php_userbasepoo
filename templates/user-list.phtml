@@ -1,0 +1,68 @@
+
+
+
+<?php 
+
+require "../logic/display-users.php" ?>
+
+<table class="col my-5 table table-striped">
+    <thead>
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Nom d'utilisateur
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Mot de passe
+        </th>
+        <th>
+            Rôle
+        </th>
+        <th>
+            Supprimer
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?= $user->getId(); ?></td>
+                    <td><?= $user->getUsername() ?></td>
+                    <td><?= $user->getEmail() ?></td>
+                    <td><?= $user->getPassword(); ?></td>
+                    <td><?= $user->getRole() ?></td>
+                    <td>
+                <a href="../logic/delete-user.php?id=" class="btn btn-danger"><scan class="bi-trash-fill">Suprimer</scan></a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Nom d'utilisateur
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Mot de passe
+        </th>
+        <th>
+            Rôle
+        </th>
+        <th>
+            Supprimer
+        </th>
+    </tr>
+    </tfoot>
+</table>
